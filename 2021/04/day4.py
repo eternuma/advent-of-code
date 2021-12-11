@@ -1,24 +1,3 @@
-def get_board_data(data):
-    nums = []
-    for i in data[0].split(","):
-        nums.append(int(i))
-
-    del data[0:2]
-
-    boards = []
-    j = 0
-    while j + 5 <= len(data):
-        board = []
-        for row in data[j:j+5]:
-            cells = []
-            for cell in row.split():
-                cells.append(int(cell))
-            board.append(cells)
-        boards.append(board)
-        j = j + 6
-    return nums, boards
-
-
 def get_score(board, marked_nums):
     board_nums = []
     for row in board:
